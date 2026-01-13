@@ -1,0 +1,245 @@
+/* App-specific styles */
+.nav-item {
+    text-decoration: none;
+}
+
+.chart-container {
+    height: 300px;
+    margin-top: 1rem;
+}
+
+.actions-cell {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-icon {
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.section-icon {
+    font-size: 1.75rem;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+.loading {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 3px solid var(--border);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.error-message {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid var(--danger);
+    color: var(--danger);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.success-message {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid var(--secondary);
+    color: var(--secondary);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.reservoir-card {
+    position: relative;
+}
+
+.reservoir-level {
+    position: relative;
+    height: 120px;
+    background: var(--bg-card-hover);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.reservoir-water {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(180deg, rgba(14, 165, 233, 0.8), rgba(34, 197, 94, 0.8));
+    transition: height 0.5s ease;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+}
+
+.reservoir-percentage {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.pump-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--bg-card);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
+    transition: all 0.3s ease;
+}
+
+.pump-card:hover {
+    border-color: var(--primary);
+}
+
+.pump-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: rgba(14, 165, 233, 0.2);
+}
+
+.pump-info {
+    flex: 1;
+}
+
+.pump-name {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.pump-power {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.pump-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.consumption-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.consumption-label {
+    width: 100px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.consumption-track {
+    flex: 1;
+    height: 24px;
+    background: var(--bg-card-hover);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.consumption-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary), #38bdf8);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 0.75rem;
+    transition: width 0.5s ease;
+    min-width: 50px;
+}
+
+.consumption-value {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.quick-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.quick-action-btn {
+    flex: 1;
+    min-width: 200px;
+    padding: 1.5rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.quick-action-btn:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: var(--shadow);
+}
+
+.quick-action-icon {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.quick-action-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.quick-action-desc {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}

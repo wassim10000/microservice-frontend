@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: irrigation-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: irrigation-frontend
+  template:
+    metadata:
+      labels:
+        app: irrigation-frontend
+    spec:
+      containers:
+      - name: irrigation-frontend
+        image: irrigation-frontend:latest
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: irrigation-frontend
+spec:
+  type: NodePort
+  selector:
+    app: irrigation-frontend
+  ports:
+  - port: 80
+    nodePort: 30000
